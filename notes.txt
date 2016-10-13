@@ -1,3 +1,5 @@
+"url":"http://localhost:8001/{{ req.params.market }}.json"
+
 ----------------------------
 PRECOMPILING AND USING GULP
 ----------------------------
