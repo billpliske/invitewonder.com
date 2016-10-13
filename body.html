@@ -24,7 +24,13 @@
         <header>
             <section class="main-color">
 
-                <h2>December 2, 2016 at 10:00 AM to December 4, 2016 at 5:30 PM</h2>
+                 {% if req.params.market == 'bill' %}
+                    <h2>Username is bill</h2> 
+                {% else %}
+                    <h2>User is someone else</h2>
+                {% endif %}
+                
+                
                 <h3>Mill Avenue, Tempe AZ</h3>
                 <a href="checkout.html" class="purchase-button">Buy Tickets</a>
             </section>
@@ -49,23 +55,37 @@
                 </ul>
 
 
-
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- -----  RSVP_DATE NOT SHOWING  ------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
 
                 <div class="rsvp">
-                    <h3>Please RSVP by Sept. 1st!</span></h3>
+                    <h3>Please RSVP by {{ rsvp_date }}!</h3>
+                    
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- -----  RSVP_DATE NOT SHOWING  ------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->
+                <!-- ------------------------------------- -->    
 
 
 
-                    <!--<form action="https://formspree.io/epliske@gmail.com" method="POST">-->
-                    <form action="#" method="POST">
-                        <input type="text" name="name" placeholder="Your name">
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <input type="text" name="number" placeholder="Total # attending">
-                        <input type="text" name="_replyto" placeholder="Your email address">
-                        <input type="hidden" name="_subject" value="RSVP for Olivia's birthday!" />
-                        <input type="hidden" name="_next" value="http://www.oliviarector.com">
-                        <input type="submit" value="Submit" class="mailbtn">
-                    </form>
+                    <form action="https://formspree.io/invitewonder@gmail.com" method="POST">
+                        <form action="#" method="POST">
+                            <input type="text" name="name" placeholder="Your name">
+                            <input type="text" name="_gotcha" style="display:none" />
+                            <input type="text" name="number" placeholder="Total # attending">
+                            <input type="text" name="_replyto" placeholder="Your email address">
+                            <input type="hidden" name="_subject" value="RSVP for Olivia's birthday!" />
+                            <input type="hidden" name="_next" value="http://www.oliviarector.com">
+                            <input type="submit" value="Submit" class="mailbtn">
+                        </form>
 
                 </div>
 
@@ -86,7 +106,9 @@
         <!-- FOOTER -->
         <footer class="nav-color">
 
-            <p class="footer">Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.</p>
+            <p class="footer"> 
+                Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.
+            </p>
 
         </footer>
 
