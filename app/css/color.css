@@ -1,0 +1,56 @@
+@charset "UTF-8";
+
+/* CSS Document */
+
+
+/* ********************** */
+
+
+/* ***** MAIN COLOR ***** */
+
+
+/* ********************** */
+
+.main-color {
+    background-color: rgba(24, 170, 144, .8);
+    border-color: rgba(24, 170, 144, .8);
+    color: rgba(24, 170, 144, .8);
+}
+
+
+/* ************************ */
+
+
+/* ***** ACCENT COLOR ***** */
+
+
+/* ************************ */
+
+.accent-color {
+    background-color: #E04229 !important;
+}
+
+.white {
+    background-color: #fff;
+}
+
+.purchase-button:hover {
+    color: #E04229;
+}
+
+nav ul li a.active::after {
+    color: #E04229;
+}
+
+
+/* ********************* */
+
+
+/* ***** NAV COLOR ***** */
+
+
+/* ********************* */
+
+.nav-color {
+    background-color: rgba(75, 75, 75, .95);
+}
