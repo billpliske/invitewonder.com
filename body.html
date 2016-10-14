@@ -48,30 +48,15 @@
                 </p>
 
                 <ul>
-                    <li><strong>Date:</strong> Saturday, Sept. 10th</li>
-                    <li class="time"><strong>Time:</strong> 5 p.m.</li>
-                    <li><strong>Place:</strong> 15149 W. Sells Dr., Goodyear, AZ 85395</li>
+                    <li><strong>Date:</strong> {{ configData.event_date }}</li>
+                    <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
+                    <li><strong>Place:</strong> {{ configData.event_address }}</li>
                 </ul>
 
 
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- -----  RSVP_DATE NOT SHOWING  ------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-
                 <div class="rsvp">
-                    <h3>Please RSVP by {{ rsvp_date }}!</h3>
-                    
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- -----  RSVP_DATE NOT SHOWING  ------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->
-                <!-- ------------------------------------- -->    
+                    <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>
+
 
 
 
@@ -127,7 +112,6 @@
 
     <!-- JS -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-
     <script src="static/js/slidebars.min.js"></script>
 
     <script>

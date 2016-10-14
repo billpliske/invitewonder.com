@@ -3,10 +3,8 @@
         "template": "base.html",
         "context": {
             "configData": {
-                "url": "http://localhost:8001/{{ req.params.market }}.json",
-                "rsvp_date": "December 1, 2016"
-            }
-            
+                "url": "http://localhost:8001/{{ req.params.market }}.json"
+            }            
         }
     }
 }
