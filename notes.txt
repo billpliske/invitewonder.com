@@ -21,29 +21,6 @@ DESIGNER NOTES
 start a server: python -m SimpleHTTPServer 8001
 
 
-------------
-GITHUB:
-------------
-ssh-add ~/.ssh/account65 (switches to sixfiveagency GitHub account)
-ssh-add ~/.ssh/id_rsa (switches to bpliske/Gannett GitHub account)
-
-1. ssh-keygen -t rsa -f ~/.ssh/account65 -C "billpliske@gmail.com"
-2. pbcopy < ~/.ssh/account65.pub
-3. Paste it as a new SSH key (new device) for the 65 GitHUb account
-
-
-#65 Github account
-Host github-sixfiveagency
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/account65
-
-#bpliske-Gannett Github account
-Host github-bpliske
-    HostName github.com
-    User git
-    IdentityFile ~/.ssh/id_rs
-    
 
 ------------
 Left to do:
