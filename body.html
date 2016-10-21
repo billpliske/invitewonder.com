@@ -23,13 +23,11 @@
         <header>
             <section class="main-color">
 
-                 {% if req.params.market == 'bill' %}
-                    <h2>Username is bill</h2> 
-                {% else %}
-                    <h2>User is someone else</h2>
-                {% endif %}
-                
-                
+                {% if req.params.market == 'bill' %}
+                <h2>Username is bill</h2> {% else %}
+                <h2>User is someone else</h2> {% endif %}
+
+
                 <h3>Mill Avenue, Tempe AZ</h3>
                 <a href="checkout.html" class="purchase-button">Buy Tickets</a>
             </section>
@@ -81,12 +79,53 @@
         <!-- wrapper -->
 
 
+        <div data-schemaid="order" data-schematype="object" data-schemapath="root" class="w3-container">
+            <!-- PERSON MAKING REQUEST -->
+            <div data-schematype="object" data-schemapath="root.requester" class="w3-container">
+                <h2>Who's creating this?</h2>
+                <div data-schematype="string" data-schemapath="root.requester.firstname">
+                    <div class="form-control">
+                        <input type="text" name="root[requester][firstname]" class="w3-input" required>
+                        <label class="w3-label w3-validate">First name</label>
+                    </div>
+                </div>
+                <div data-schematype="string" data-schemapath="root.requester.lastname">
+                    <div class="form-control">
+                        <input type="text" name="root[requester][lastname]" class="w3-input" required>
+                        <label class="w3-label w3-validate">Last name</label>
+                    </div>
+                </div>
+                <div data-schematype="string" data-schemapath="root.requester.email">
+                    <div class="form-control">
+                        <input type="text" name="root[requester][email]" class="w3-input" required>
+                        <label class="w3-label w3-validate">Email</label>
+                    </div>
+                </div>
+
+                <!-- PERSON WE'RE CELEBRATING -->
+                <div data-schematype="object" data-schemapath="root.person">
+                    <h2>Who's this about?</h2>
+                    <div data-schematype="string" data-schemapath="root.person.firstname">
+                        <div class="form-control">
+                            <input type="text" name="root[request][firstname]" class="w3-input" required>
+                            <label class="w3-label w3-validate">First name</label>
+                        </div>
+                    </div>
+                </div>
+                <!-- THE SUBMIT BUTTON -->
+                <button id="submit" class="w3-btn w3-large">Submit</button>
+            </div>
+
+
+        </div>
+
+
 
 
         <!-- FOOTER -->
         <footer class="nav-color">
 
-            <p class="footer"> 
+            <p class="footer">
                 Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.
             </p>
 
@@ -115,8 +154,8 @@
     <script src="static/js/slidebars.min.js"></script>
 
     <script>
-        (function($) {
-            $(document).ready(function() {
+        (function ($) {
+            $(document).ready(function () {
                 $.slidebars({
                     siteClose: true,
                     disableOver: 800,
@@ -126,11 +165,10 @@
             });
         })(jQuery);
 
-        $('nav li a').click(function(e) {
+        $('nav li a').click(function (e) {
             $('a').removeClass('active');
             $(this).addClass('active');
         });
-
     </script>
 
 
