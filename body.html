@@ -54,22 +54,22 @@
 
                 <div class="rsvp">
                     <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>
+                    
+
+                        <!-- ---------------- -->
+                        <!-- FORM STARTS HERE --> 
+                        <!-- ---------------- -->
+                    <div id="editor_holder"></div>
+                    <!-- THE SUBMIT BUTTON -->
+                     <input id="submit" type="submit" value="Submit" class="mailbtn" />
+                        <!-- ---------------- -->
+                        <!-- FORM ENDS HERE --> 
+                        <!-- ---------------- -->
+                      
 
 
 
-
-                    <form action="https://formspree.io/invitewonder@gmail.com" method="POST">
-                        <form action="#" method="POST">
-                            <input type="text" name="name" placeholder="Your name">
-                            <input type="text" name="_gotcha" style="display:none" />
-                            <input type="text" name="number" placeholder="Total # attending">
-                            <input type="text" name="_replyto" placeholder="Your email address">
-                            <input type="hidden" name="_subject" value="RSVP for Olivia's birthday!" />
-                            <input type="hidden" name="_next" value="http://www.oliviarector.com">
-                            <input type="submit" value="Submit" class="mailbtn">
-                        </form>
-
-                </div>
+                </div><!-- END RSVP -->
 
 
             </div>
@@ -79,45 +79,7 @@
         <!-- wrapper -->
 
 
-        <div data-schemaid="order" data-schematype="object" data-schemapath="root" class="w3-container">
-            <!-- PERSON MAKING REQUEST -->
-            <div data-schematype="object" data-schemapath="root.requester" class="w3-container">
-                <h2>Who's creating this?</h2>
-                <div data-schematype="string" data-schemapath="root.requester.firstname">
-                    <div class="form-control">
-                        <input type="text" name="root[requester][firstname]" class="w3-input" required>
-                        <label class="w3-label w3-validate">First name</label>
-                    </div>
-                </div>
-                <div data-schematype="string" data-schemapath="root.requester.lastname">
-                    <div class="form-control">
-                        <input type="text" name="root[requester][lastname]" class="w3-input" required>
-                        <label class="w3-label w3-validate">Last name</label>
-                    </div>
-                </div>
-                <div data-schematype="string" data-schemapath="root.requester.email">
-                    <div class="form-control">
-                        <input type="text" name="root[requester][email]" class="w3-input" required>
-                        <label class="w3-label w3-validate">Email</label>
-                    </div>
-                </div>
-
-                <!-- PERSON WE'RE CELEBRATING -->
-                <div data-schematype="object" data-schemapath="root.person">
-                    <h2>Who's this about?</h2>
-                    <div data-schematype="string" data-schemapath="root.person.firstname">
-                        <div class="form-control">
-                            <input type="text" name="root[request][firstname]" class="w3-input" required>
-                            <label class="w3-label w3-validate">First name</label>
-                        </div>
-                    </div>
-                </div>
-                <!-- THE SUBMIT BUTTON -->
-                <button id="submit" class="w3-btn w3-large">Submit</button>
-            </div>
-
-
-        </div>
+       
 
 
 
@@ -169,6 +131,42 @@
             $('a').removeClass('active');
             $(this).addClass('active');
         });
+    </script>
+    
+    
+    <script>
+        // Initialize the editor with a JSON schema
+        var editor = new JSONEditor(document.getElementById('editor_holder'),{
+            schema: {
+                type: "object",
+                title: "Order",
+                properties: {
+                    firstname: {
+                    title: "First name",
+                    type: "string"
+                    },
+                    lastname: {
+                    title: "Last name",
+                    type: "string"
+                    },
+                    email: {
+                    title: "Email",
+                    type: "string",
+                    required_by_default: true
+                    },
+                    person_firstname: {
+                    title: "Person's first name",
+                    type: "string"
+                    }          
+                }
+            }
+        });
+      
+      // Hook up the submit button to log to the console
+      document.getElementById('submit').addEventListener('click',function() {
+        // Get the value from the editor
+        console.log(editor.getValue());
+      });
     </script>
 
 

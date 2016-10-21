@@ -263,8 +263,15 @@ header .purchase-button:hover {
 
 /* ******************* 
 /* ***** SUMMARY ***** 
-/* ******************* 
+/* ******************* */
 
+.rsvp {
+    clear: both;
+    margin: 40px auto 0 auto;
+    text-align: center;
+    width: 90%;
+    max-width: 500px;
+}
 
 /* ****************** 
 /* ***** FOOTER ***** 
@@ -360,61 +367,8 @@ footer a:hover {
 /* ********** FORM ********** 
 /* *************************** */
 
-.rsvp {
-    margin: 40px 0px 30px 0;
-    clear: both;
-}
-.cognito {
-    background: transparent !important;
-    text-align: center !important;
-    color: white !important;
-}
-.cognito form {
-    margin: 0 auto !important;
-}
-.cognito .c-field,
-.cognito .c-section {
-    width: 100% !important;
-}
-.cognito .c-forms-form .c-helptext {
-    color: #fff !important;
-}
-.cognito .c-editor INPUT[type=text],
-.cognito .c-editor INPUT[type=password],
-.cognito .c-editor textarea,
-.cognito .c-editor select {
-    height: 40px !important;
-}
-.cognito .c-action {
-    float: none;
-}
-.cognito .c-forms-form button {
-    padding: .5em 1.25em;
-    width: 280px;
-    margin-top: 30px;
-    font-family: "Futura Today DemiBold", sans-serif !important;
-    font-size: 18px !important;
-}
-.cognito .c-forms-form .c-forms-not-available-message,
-.cognito .c-forms-form .c-page-numbering,
-.cognito .c-forms-form .c-forms-confirmation-message,
-.cognito .c-forms-form #c-save-resume-content,
-.cognito .c-forms-form .c-progress-section,
-.cognito .c-forms-form .c-forms-payment-order-summary .detail {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 0.8125em;
-    color: #fff !important;
-}
-.cognito #c-submit-button {
-    position: relative;
-    padding: 20px 0;
-}
-form {
-    margin: 0 auto;
-    text-align: center;
-    width: 90%;
-    max-width: 500px;
-}
+
+
 input {
     font-size: 18px;
     padding: 12px 16px;
