@@ -1,0 +1,78 @@
+{
+  "requester": {
+    "type": "object",
+    "title": "About Requester",
+    "properties": {
+       "firstname": {
+          "type": "string",
+          "title": "First Name"
+       },
+      "lastname": {
+          "type": "string",
+          "title": "Last name"
+       },
+      "email": {
+          "type": "string",
+          "title": "Email"
+       }
+    }
+},
+  "person": {
+    "type": "object",
+    "title": "About Person",
+    "properties": {
+       "firstname": {
+          "type": "string",
+          "title": "First Name"
+       }
+    }
+},
+  "event": {
+    "type": "object",
+    "title": "About the event",
+    "properties": {
+       "date": {
+          "type": "date",
+          "title": "Street Address"
+       },
+      "time": {
+          "type": "time",
+          "title": "Time"
+       },
+      "address": {
+          "type": "string",
+          "title": "Address"
+       },
+      "city": {
+          "type": "string",
+          "title": "City"
+    },
+      "state": {
+          "type": "string",
+          "title": "State"
+    },
+      "zip": {
+          "type": "string",
+          "title": "Zip"
+    },
+      "phone": {
+          "type": "string",
+          "title": "Phone"
+    },
+      "rsvp_deadline": {
+          "type": "string",
+          "title": "RSVP deadline"
+    },
+}
+},
+  "theme": {
+    "type": "object",
+    "title": "Choose a theme",
+    "properties": {
+       "themeName": {
+          "type": "string",
+          "title": "Space"
+       }
+    }
+}
+}

@@ -71,11 +71,11 @@
     <!-- //////////////////// -->
     <!-- FOOTER -->
     <!-- //////////////////// -->
-    <footer class="nav-color">
+    <!--<footer class="nav-color">
         <p class="footer">
             Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.
         </p>
-    </footer>
+    </footer>-->
 
 
 </div>
@@ -147,37 +147,106 @@
                 type: "object",
                 title: "Order",
                 options: {
-                  disable_edit_json: true,
+                    disable_collapse: true,
+                    disable_edit_json: true,
                     disable_properties: true
-                },
-                
-                properties: {
-                    firstname: {
-                    title: "First name",
-                    type: "string"
+                },               
+                properties: {                  
+                    "requester": {
+                        "type": "object",
+                        "title": "About Requester",
+                        options: {
+                            disable_collapse: true,
+                            disable_edit_json: true,
+                            disable_properties: true
+                            },
+                        "properties": {
+                           "firstname": {
+                              "type": "string",
+                              "title": "First Name"
+                           },
+                          "lastname": {
+                              "type": "string",
+                              "title": "Last name"
+                           },
+                          "email": {
+                              "type": "string",
+                              "title": "Email"
+                           }
+                        }
                     },
-                    lastname: {
-                    title: "Last name",
-                    type: "string"
+                    "person": {
+                        "type": "object",
+                        "title": "About Person",
+                        options: {
+                            disable_collapse: true,
+                            disable_edit_json: true,
+                            disable_properties: true
+                            },
+                        "properties": {
+                           "firstname": {
+                              "type": "string",
+                              "title": "First Name"
+                           }
+                        }
                     },
-                    email: {
-                    title: "Email",
-                    type: "string",
-                    format: "email"
+                    "event": {
+                        "type": "object",
+                        "title": "About the event",
+                        options: {
+                            disable_collapse: true,
+                            disable_edit_json: true,
+                            disable_properties: true
+                            },                        
+                        "properties": {
+                            "address": {
+                                "type": "string",
+                                "title": "Street Address"
+                            },
+                            "time": {
+                                "type": "string",
+                                "title": "Time"
+                            },
+                            "address": {
+                                "type": "string",
+                                "title": "Address"
+                            },
+                            "city": {
+                                "type": "string",
+                                "title": "City"
+                            },
+                            "state": {
+                                "type": "string",
+                                "title": "State"
+                            },
+                            "zip": {
+                                "type": "string",
+                                "title": "Zip"
+                            },
+                            "phone": {
+                                "type": "string",
+                                "title": "Phone"
+                            },
+                            "rsvp_deadline": {
+                                "type": "string",
+                                "title": "RSVP deadline"
+                            }
+                        }
                     },
-                    person_firstname: {
-                    title: "Person's first name",
-                    type: "string"
-                    },
-                    event_date: {
-                    title: "Event date",
-                    type: "string",
-                    format: "date"
-                    },
-                    event_time: {
-                    title: "Event Time",
-                    type: "string",
-                    format: "time"
+                    "theme": {
+                        "type": "object",
+                        "title": "Choose a theme",
+                        options: {
+                            disable_collapse: true,
+                            disable_edit_json: true,
+                            disable_properties: true
+                            },                        
+                        "properties": {
+                            "themeName": {
+                                "type": "string",
+                                "title": "Space"
+                            }
+                        }
                     }
                 }
             }
