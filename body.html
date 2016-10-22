@@ -41,7 +41,7 @@
     <!-- SECTION XXXXXXX -->
     <!-- //////////////////// -->
 
-    <div class="container">
+    <div class="container" style="background-color:white;">
         <div class="outer">
             <div class="middle">
                 <div class="inner">
@@ -67,33 +67,7 @@
     </div>
 
 
-    <!-- //////////////////// -->
-    <!-- Section xxxxxxxx -->
-    <!-- //////////////////// -->
-
-    <section class="text">
-        <p class="intro"></p>
-        <ul>
-            <li><strong>Date:</strong> {{ configData.event_date }}</li>
-            <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
-            <li><strong>Place:</strong> {{ configData.event_address }}</li>
-        </ul>
-        <div class="rsvp">
-            <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>                  
-                <!-- ---------------- -->
-                <!-- FORM STARTS HERE --> 
-                <!-- ---------------- -->
-            <div id="editor_holder"></div>
-            <!-- THE SUBMIT BUTTON -->
-             <input id="submit" type="submit" value="Submit" class="mailbtn" />
-                <!-- ---------------- -->
-                <!-- FORM ENDS HERE --> 
-                <!-- ---------------- -->
-        </div><!-- END RSVP -->
-    </section>
-
-
-
+  
     <!-- //////////////////// -->
     <!-- FOOTER -->
     <!-- //////////////////// -->
@@ -131,7 +105,7 @@
 
 
         // THIS PART NEEDS TO BE UNIQUE FOR THIS PROJECT
-        $('.container').prepend(
+        /*$('.container').prepend(
 
             '<div class="home-image">' +
             '<picture>' +
@@ -142,7 +116,7 @@
             '</picture>' +
             '</div>'
 
-        );
+        );*/
 
     </script>
 
@@ -172,6 +146,11 @@
             schema: {
                 type: "object",
                 title: "Order",
+                options: {
+                  disable_edit_json: true,
+                    disable_properties: true
+                },
+                
                 properties: {
                     firstname: {
                     title: "First name",

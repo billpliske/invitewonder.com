@@ -17,7 +17,23 @@ https://zellwk.com/blog/nunjucks-with-gulp/
 https://mozilla.github.io/nunjucks/templating.html
 https://www.geofilters.co/
 
+http://jsonschema.net/#/
+https://github.com/jdorn/json-editor/blob/master/examples/person.json
 
+- hiding the admin buttons:
+    
+- brad's idea of what happens whena person fills out the form:
+    - in motly, I'd have a root:user/:invite.id
+    - user hits sibmit
+    json goes to scree, validate asnsaves
+    gives me back  url that I can define
+     - the name, 
+     - user: brad
+     -urL: /brad/birthday=spectacular
+     - user accounts needs to be considered
+     - people trying to send invite who aren't guests
+     - user strategy: ssend someone a link in an email (with URl) .. url is essentially a password
+     -  in url is usrname and other things...
 
 
 ---------------
