@@ -136,6 +136,7 @@
     
     <script>
         // Initialize the editor with a JSON schema
+        
         var editor = new JSONEditor(document.getElementById('editor_holder'),{
             schema: {
                 type: "object",
@@ -152,21 +153,34 @@
                     email: {
                     title: "Email",
                     type: "string",
-                    required_by_default: true
+                    format: "email"
                     },
                     person_firstname: {
                     title: "Person's first name",
                     type: "string"
-                    }          
+                    },
+                    event_date: {
+                    title: "Event date",
+                    type: "string",
+                    format: "date"
+                    },
+                    event_time: {
+                    title: "Event Time",
+                    type: "string",
+                    format: "time"
+                    }
                 }
             }
         });
+        
+        
       
       // Hook up the submit button to log to the console
       document.getElementById('submit').addEventListener('click',function() {
         // Get the value from the editor
         console.log(editor.getValue());
       });
+        
     </script>
 
 
