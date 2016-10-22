@@ -352,16 +352,16 @@ p {
     border: none!important;
 }
 #editor_holder h3 span {
-    font-family: 'Roboto Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 40px;
+    display: none
 }
 #editor_holder .row h3 span {
+    display: block;
     font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 4px;
     font-size: 19px;
     color: chocolate;
     text-transform: uppercase;
-    margin: 0 0 20px 0;
+    margin: 35px 0 -13px 0;
 }
 .form-control {}
 input {
