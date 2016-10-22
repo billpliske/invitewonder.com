@@ -27,6 +27,7 @@ DESIGNER NOTES
 1) shrink header on scroll: http://callmenick.com/_development/resize-header-on-scroll/
     - Also, logo braks into two pieces, becoming horizontal
 2) Typography: http://1961.today/
+3) images: https://bitsofco.de/the-srcset-and-sizes-attributes/
 
 
 
