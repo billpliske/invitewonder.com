@@ -1,84 +1,84 @@
 <body>
-       
-        
-<!-- FIXED NAVIGATION BAR -->
-<nav class="sb-slide white">
 
-    <div class="nav-wrapper"><img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
-        <img src="static/images/logo_invite_wonder.png" class="mainlogo">
-        <ul>
-            <li><a href="#top" class="active">Home</a></li>
-            <li><a href="#gallery">Gallery</a></li>
-            <li><a href="#buy">Purchase</a></li>
-            <li><a href="#faq">FAQ</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </div>
-</nav>
-    
-    
-<div id="wrapper">
-        
-    <!-- //////////////////// -->
-    <!-- SECTION XXXXXXX -->
-    <!-- //////////////////// -->
 
-    <div class="container">
-        <div class="outer">
-            <div class="middle">
-                <div class="inner">
-                    <h1>Welcome to SixFive Agency.</h1>
-                    <p>We're an Arizona design company here for your small businesses, personal websites and niche products. We focus on users first, making sure your project is easy to navigate, and works on any device.</p>
-                    <a href="checkout.html" class="purchase-button">Buy Tickets</a>
-                    <div class="arrow bounce hideArrow"></div>
-                </div>
+    <!-- FIXED NAVIGATION BAR -->
+    <nav class="sb-slide white">
+
+        <div class="nav-wrapper"><img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
+            <img src="static/images/logo_invite_wonder.png" class="mainlogo">
+            <ul>
+                <li><a href="#top" class="active">Home</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#buy">Purchase</a></li>
+                <li><a href="#faq">FAQ</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+
+    <div id="wrapper">
+
+        <!-- //////////////////// -->
+        <!-- SECTION XXXXXXX -->
+        <!-- //////////////////// -->
+
+        <!--<div class="container">
+    <div class="outer">
+        <div class="middle">
+            <div class="inner">
+                <h1>Welcome to SixFive Agency.</h1>
+                <p>We're an Arizona design company here for your small businesses, personal websites and niche products. We focus on users first, making sure your project is easy to navigate, and works on any device.</p>
+                <a href="checkout.html" class="purchase-button">Buy Tickets</a>
+                <div class="arrow bounce hideArrow"></div>
             </div>
         </div>
     </div>
-    
-    
-    <!-- //////////////////// -->
-    <!-- SECTION XXXXXXX -->
-    <!-- //////////////////// -->
+</div>-->
 
-    <div class="container" style="background-color:white;">
-        <div class="outer">
-            <div class="middle">
-                <div class="inner">
-                    <ul>
-                        <li><strong>Date:</strong> {{ configData.event_date }}</li>
-                        <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
-                        <li><strong>Place:</strong> {{ configData.event_address }}</li>
-                    </ul>
 
-                        <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>                  
-                            <!-- ---------------- -->
-                            <!-- FORM STARTS HERE --> 
-                            <!-- ---------------- -->
+        <!-- //////////////////// -->
+        <!-- SECTION XXXXXXX -->
+        <!-- //////////////////// -->
+
+        <div class="container" style="background-color:white;">
+            <div class="outer">
+                <div class="middle">
+                    <div class="inner">
+                        <ul>
+                            <li><strong>Date:</strong> {{ configData.event_date }}</li>
+                            <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
+                            <li><strong>Place:</strong> {{ configData.event_address }}</li>
+                        </ul>
+
+                        <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>
+                        <!-- ---------------- -->
+                        <!-- FORM STARTS HERE -->
+                        <!-- ---------------- -->
                         <div id="editor_holder"></div>
                         <!-- THE SUBMIT BUTTON -->
-                         <input id="submit" type="submit" value="Submit" class="mailbtn" />
-                            <!-- ---------------- -->
-                            <!-- FORM ENDS HERE --> 
-                            <!-- ---------------- -->
+                        <input id="submit" type="submit" value="Submit" class="mailbtn" />
+                        <!-- ---------------- -->
+                        <!-- FORM ENDS HERE -->
+                        <!-- ---------------- -->
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
 
 
-  
-    <!-- //////////////////// -->
-    <!-- FOOTER -->
-    <!-- //////////////////// -->
-    <!--<footer class="nav-color">
+
+        <!-- //////////////////// -->
+        <!-- FOOTER -->
+        <!-- //////////////////// -->
+        <!--<footer class="nav-color">
         <p class="footer">
             Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.
         </p>
     </footer>-->
 
 
-</div>
+    </div>
 
 
     <!-- MOBILE SLIDE MENU -->
@@ -98,8 +98,8 @@
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
     <script src="static/js/slidebars.min.js"></script>
     <script src="static/js/hideArrow.js"></script>
-    
-     <script type="text/javascript">
+
+    <script type="text/javascript">
         var coverImages = ["arizona", "flagstaff"];
         var randomImage = coverImages[Math.floor(Math.random() * coverImages.length)];
 
@@ -121,8 +121,8 @@
     </script>
 
     <script>
-        (function ($) {
-            $(document).ready(function () {
+        (function($) {
+            $(document).ready(function() {
                 $.slidebars({
                     siteClose: true,
                     disableOver: 800,
@@ -132,17 +132,18 @@
             });
         })(jQuery);
 
-        $('nav li a').click(function (e) {
+        $('nav li a').click(function(e) {
             $('a').removeClass('active');
             $(this).addClass('active');
         });
+
     </script>
-    
-    
+
+
     <script>
         // Initialize the editor with a JSON schema
-        
-        var editor = new JSONEditor(document.getElementById('editor_holder'),{
+
+        var editor = new JSONEditor(document.getElementById('editor_holder'), {
             schema: {
                 type: "object",
                 title: "Order",
@@ -150,8 +151,8 @@
                     disable_collapse: true,
                     disable_edit_json: true,
                     disable_properties: true
-                },               
-                properties: {                  
+                },
+                properties: {
                     "requester": {
                         "type": "object",
                         "title": "About Requester",
@@ -159,20 +160,17 @@
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
-                            },
+                        },
                         "properties": {
-                           "firstname": {
-                              "type": "string",
-                              "title": "First Name"
-                           },
-                          "lastname": {
-                              "type": "string",
-                              "title": "Last name"
-                           },
-                          "email": {
-                              "type": "string",
-                              "title": "Email"
-                           }
+                            "firstname": {
+                                "type": "string",
+                                "title": "Your Name",
+                                placeholder: "Your name"
+                            },
+                            "email": {
+                                "type": "string",
+                                "title": "Email"
+                            }
                         }
                     },
                     "person": {
@@ -182,12 +180,12 @@
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
-                            },
+                        },
                         "properties": {
-                           "firstname": {
-                              "type": "string",
-                              "title": "First Name"
-                           }
+                            "firstname": {
+                                "type": "string",
+                                "title": "First Name"
+                            }
                         }
                     },
                     "event": {
@@ -197,7 +195,7 @@
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
-                            },                        
+                        },
                         "properties": {
                             "address": {
                                 "type": "string",
@@ -240,26 +238,33 @@
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
-                            },                        
+                        },
                         "properties": {
                             "themeName": {
                                 "type": "string",
-                                "title": "Space"
+                                "enum": [
+                                    "Space & Aliens",
+                                    "Video games",
+                                    "Jungle",
+                                    "Superhero",
+                                    "Horror/Scary"
+                                ],
+                                "default": "Space & Aliens"
                             }
                         }
                     }
                 }
             }
         });
-        
-        
-      
-      // Hook up the submit button to log to the console
-      document.getElementById('submit').addEventListener('click',function() {
-        // Get the value from the editor
-        console.log(editor.getValue());
-      });
-        
+
+
+
+        // Hook up the submit button to log to the console
+        document.getElementById('submit').addEventListener('click', function() {
+            // Get the value from the editor
+            console.log(editor.getValue());
+        });
+
     </script>
 
 

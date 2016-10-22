@@ -103,7 +103,6 @@ body {
     background-color: #fff;
     color: #1e1e1e;
 }
-
 html {
     box-sizing: border-box;
 }
@@ -134,7 +133,6 @@ select::-ms-expand {
     margin-top: -90px;
     visibility: hidden;
 }
-
 #wrapper {
     /*width: 100%;
     height:100%;
@@ -224,8 +222,6 @@ nav ul li a.active {
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
-
-
 
 /* ******************* 
 /* ***** BIG HOME IMAGE ***** 
@@ -329,7 +325,7 @@ p {
     position: fixed;
     bottom: 0;
     left: 50%;
-    z-index:99;
+    z-index: 99;
     margin-left: -20px;
     width: 30px;
     height: 30px;
@@ -340,35 +336,71 @@ p {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
+
 /* ****************** 
 /* ***** FORM ***** 
 /* ****************** */
-.rsvp {
+
+#editor_holder {
     clear: both;
     margin: 40px auto 0 auto;
     text-align: center;
-    width: 90%;
+    width: 100%;
     max-width: 500px;
 }
-
+#editor_holder div {
+    border: none!important;
+}
+#editor_holder h3 span {
+    font-family: 'Roboto Light', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+}
+#editor_holder .row h3 span {
+    font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+    letter-spacing: 4px;
+    font-size: 19px;
+    color: chocolate;
+    text-transform: uppercase;
+    margin: 0 0 20px 0;
+}
+.form-control {}
 input {
     font-size: 18px;
     padding: 12px 16px;
     margin-bottom: 11px;
-    width: 90%;
+    border: 1px solid #ccc;
+    background-color: #fff;
+    width: 100%;
     max-width: 500px;
 }
-input[type=submit] {
+select {
+    font-size: 18px;
+    padding: 12px 16px;
+    width: 100%;
+    box-shadow: none;
+    background: transparent;
+    -webkit-appearance: none;
+    height: 52px;
+    border-radius: 0px;
+    background: #fff url(../images/selectBtn.png) no-repeat right;
+}
+select:focus {
+    outline: none;
+}
+
+/*input[type=submit] {
     border: 0 none;
     cursor: pointer;
     -webkit-appearance: none;
     border-radius: 0;
-}
+}*/
+
 .mailbtn {
     color: #000;
     padding: 16px 13px;
-    width: 200px;
-    margin-top: 10px;
+    width: 250px;
+    margin: 23px auto 50px auto;
+    display: block;
 }
 .mailbtn:hover {
     background: red;
@@ -493,12 +525,13 @@ footer a:hover {
     }
 }
 
-
 /* ************************** 
 /* **************************
 /* **** HEADER AND MENU ***** 
 /* **************************
 /* ************************** */
+
+
 /* **************************
 /* ************************** 
 /* ***** RESPONSIVE 800 ***** 
