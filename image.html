@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- META -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>image test</title>
+    <style>
+        
+        @-ms-viewport{
+  width: device-width;
+}
+        * { 
+        padding:0;
+        margin:0;
+        }
+    img {
+    width:100%;
+        }
+    </style>
+    
+    <script>
+    // Picture element HTML5 shiv
+    document.createElement( "picture" );
+  </script>
+  <script src="static/js/picturefill.min.js" async></script>
+
+</head>
+    <body>
+        
+        <div style="width:100%;">
+        <img src="static/images/themes/stadium/phone-p.jpg"  
+             srcset="static/images/themes/stadium/phone-p.jpg 430w, 
+                     static/images/themes/stadium/phone-l.jpg 760w, 
+                     static/images/themes/stadium/tab-p.jpg 768w, 
+                     static/images/themes/stadium/tab-l.jpg 1024w, 
+                     static/images/themes/stadium/desktop.jpg 1536w, 
+                     static/images/themes/stadium/desktop-r.jpg 2560w"
+
+             sizes="(min-width: 0px) 100vw">
+            
+
+   
+            
+            
+            
+            </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    </body>
+
+</html>
