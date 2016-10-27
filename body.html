@@ -2,39 +2,61 @@
 
 
     <!-- FIXED NAVIGATION BAR -->
-    <nav class="sb-slide white">
+    <!--<nav class="sb-slide white">
 
-        <div class="nav-wrapper"><img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
-            <img src="static/images/logo_invite_wonder.png" class="mainlogo">
-            <ul>
-                <li><a href="#top" class="active">Home</a></li>
-                <li><a href="#gallery">Gallery</a></li>
-                <li><a href="#buy">Purchase</a></li>
-                <li><a href="#faq">FAQ</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </div>
-    </nav>
+    
+<img src="static/images/logo_invite_wonder.png" class="mainlogo">
+
+        <ul>
+            <li><a href="#top" class="active">Home</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#buy">Purchase</a></li>
+            <li><a href="#faq">FAQ</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </div>
+</nav>-->
+
+
 
 
     <div id="wrapper">
+
+        <nav>
+            <img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
+            <img src="static/images/logo_invite_wonder_white.png" class="mainlogo">
+        </nav>
+
 
         <!-- //////////////////// -->
         <!-- SECTION XXXXXXX -->
         <!-- //////////////////// -->
 
-        <!--<div class="container">
-    <div class="outer">
-        <div class="middle">
-            <div class="inner">
-                <h1>Welcome to SixFive Agency.</h1>
-                <p>We're an Arizona design company here for your small businesses, personal websites and niche products. We focus on users first, making sure your project is easy to navigate, and works on any device.</p>
-                <a href="checkout.html" class="purchase-button">Buy Tickets</a>
-                <div class="arrow bounce hideArrow"></div>
+        <section class="splash">
+            <div class="container" style="background-color:white;">
+                <div class="home-image">
+                    <img src="static/images/home/mobileNew_1080x1920.jpg" srcset="static/images/home/mobileOld_640x960.jpg 640w, 
+                    static/images/home/mobileNew_1080x1920.jpg 1080w, 
+                    static/images/home/desktop_2200x1600.jpg 2200w" sizes="100vw">
+                </div>
+                <div class="outer">
+                    <div class="middle">
+                        <div class="inner">
+                            <ul>
+                                <li><strong>Date:</strong> {{ configData.event_date }}</li>
+                                <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
+                                <li><strong>Place:</strong> {{ configData.event_address }}</li>
+                            </ul>
+
+                            <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>
+
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</div>-->
+        </section>
+
+
 
 
         <!-- //////////////////// -->
@@ -42,16 +64,14 @@
         <!-- //////////////////// -->
 
         <div class="container" style="background-color:white;">
+            <div class="home-image">
+                <img src="static/images/home/mobileNew_1080x1920.jpg" srcset="static/images/home/mobileOld_640x960.jpg 640w, 
+                    static/images/home/mobileNew_1080x1920.jpg 1080w, 
+                    static/images/home/desktop_2200x1600.jpg 2200w" sizes="100vw">
+            </div>
             <div class="outer">
                 <div class="middle">
                     <div class="inner">
-                        <ul>
-                            <li><strong>Date:</strong> {{ configData.event_date }}</li>
-                            <li class="time"><strong>Time:</strong> {{ configData.event_time }}</li>
-                            <li><strong>Place:</strong> {{ configData.event_address }}</li>
-                        </ul>
-
-                        <h3>Please RSVP by {{ configData.rsvp_date }}!</h3>
                         <!-- ---------------- -->
                         <!-- FORM STARTS HERE -->
                         <!-- ---------------- -->
@@ -117,7 +137,6 @@
             '</div>'
 
         );*/
-
     </script>
 
     <script>
@@ -136,7 +155,6 @@
             $('a').removeClass('active');
             $(this).addClass('active');
         });
-
     </script>
 
 
@@ -264,7 +282,6 @@
             // Get the value from the editor
             console.log(editor.getValue());
         });
-
     </script>
 
 

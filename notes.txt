@@ -9,6 +9,8 @@ npm install gulp-nunjucks-render --save-dev
 
 start a server: python -m SimpleHTTPServer 8001
 
+Motly get updated? Do this: npm install -g motly
+
 
 -------------------
 REFERENCE WEBSITES
