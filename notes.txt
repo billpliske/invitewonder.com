@@ -9,6 +9,8 @@ npm install gulp-nunjucks-render --save-dev
 
 start a server: python -m SimpleHTTPServer 8001
 
+Motly get updated? Do this: npm install -g motly
+
 
 -------------------
 REFERENCE WEBSITES
@@ -46,6 +48,8 @@ DESIGNER NOTES
 3) images: https://bitsofco.de/the-srcset-and-sizes-attributes/
 4) nav touches: https://medium.com/swlh/creative-form-input-field-design-examples-bfe5dd50808a#.fjzbjhikn
 5) Icons: http://zavoloklom.github.io/material-design-iconic-font/icons.html?_utm_source=1-2-2
+6) responsive images: http://responsiveimages.org/demos/variable-width/index.html
+
 
 
 
