@@ -3,10 +3,10 @@
 
     <!-- FIXED NAVIGATION BAR -->
 
-    <!--<nav class="sb-slide white">
+    <nav class="sb-slide white">
 
-    
-<img src="static/images/logo_invite_wonder.png" class="mainlogo">
+
+     <!--<img src="static/images/logo_invite_wonder.png" class="mainlogo">-->
 
         <ul>
             <li><a href="#top" class="active">Home</a></li>
@@ -15,8 +15,8 @@
             <li><a href="#faq">FAQ</a></li>
             <li><a href="#contact">Contact</a></li>
         </ul>
-    </div>
-</nav>-->
+        </div>
+    </nav>
 
 
 
@@ -31,23 +31,21 @@
 
 
         <!-- //////////////////// -->
-        <!-- SECTION XXXXXXX -->
+        <!-- SECTION SPLASH -->
         <!-- //////////////////// -->
 
         <section class="splash">
             <div class="container" style="background-color:white;">
                 <div class="home-image">
-                    <img src="static/images/home/mobileNew_1080x1920.jpg" srcset="static/images/home/mobileOld_640x960.jpg 640w, 
-                    static/images/home/mobileNew_1080x1920.jpg 1080w, 
-                    static/images/home/desktop_2200x1600.jpg 2200w" sizes="100vw">
+                    <img src="{{ configData.splash_phone}}" srcset="{{ configData.splash_old }}, 
+                                 {{ configData.splash_phone }}, 
+                                 {{ configData.splash_desktop }}" sizes="100vw">
                 </div>
                 <div class="outer">
                     <div class="text-gradient">
                         <div class="middle">
                             <div class="inner">
-                                <!--<h3>Please RSVP by {{ configData.rsvp_date }}!</h3>-->
-
-                                <h2>To celebrate James turning 10, we could use your help.</h2>
+                                <h2>To celebrate {{ configData.user_name }} turning {{ configData.user_age }}, we could use your help.</h2>
                                 <h2>(To kill some zombies.)</h2>
 
                             </div>

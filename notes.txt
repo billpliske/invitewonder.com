@@ -52,6 +52,18 @@ DESIGNER NOTES
 
 
 
+---------------
+THEME APPROACH?
+---------------
+
+1. Website pulls in the zombie theme.
+2. This theme contains type specs and various backgrounds for each section.
+3. Wherever there is a user image needed (like the birthday boy on cover) ... that gets pulled in from the user directory
+4. Maybe the splash image is a JPG with the person's face embedded into JPG, to keep the file size down.
+5. But other sections of the size have generic zombie background images that don't change on custom zombie sites.
+6. Do themes actually NEED a hamburger menu? If I'm just going to stack sections on top of each other for mobile, and sometimes side-by-side on desktop ... what's in the wing menu?
+
+
 
 ------------
 Left to do:
