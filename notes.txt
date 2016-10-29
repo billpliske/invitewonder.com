@@ -56,5 +56,7 @@ DESIGNER NOTES
 ------------
 Left to do:
 ------------
+- Organize CSS so that it's lean and mobile at the top
+- Set up fonts so that they load depending on the theme used
 
 
