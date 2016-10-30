@@ -22,6 +22,9 @@
 
 
 
+
+
+
     <div id="wrapper">
 
         <nav>
@@ -29,13 +32,21 @@
             <!--<img src="static/images/logo_invite_wonder_white.png" class="mainlogo">-->
         </nav>
 
+        
+        
         <!-- //////////////////// -->
-        <!-- AUDIO LOOP -->
-        <!-- //////////////////// -->
-        <!--<audio loop autoplay>
-    <source src="static/images/home/war_loop.ogg" type="audio/ogg">
-    <source src="static/images/home/war_loop.mp3" type="audio/mpeg"> Your browser does not support the audio element.
-</audio>-->
+                                <!-- AUDIO LOOP -->
+                                <!-- //////////////////// -->
+
+                                <a id="mtoggle" style="cursor:pointer; position:absolute; display:inline-block; top:3px; left:3px; z-index:9999;">
+                                <img src="http://ftutorials.com/wp-content/uploads/2013/08/speaker.png"></a>
+                                <audio id="playTune" loop autoplay>
+                                    <source src="static/images/home/war_loop.mp3" type="audio/mpeg">
+                                    <source src="static/images/home/war_loop.ogg" type="audio/ogg">
+                                </audio>
+
+
+
 
 
         <!-- //////////////////// -->
@@ -50,8 +61,15 @@
                 </div>
                 <div class="outer">
                     <div class="text-gradient ">
+                        
+                        
+                        
+                        
                         <div class="middle ">
                             <div class="inner ">
+                                
+                                
+                                
                                 <h2>To celebrate {{ configData.user_name }} turning {{ configData.user_age }}, we could use your help.</h2>
                                 <h2>(To kill some zombies.)</h2>
 
@@ -124,6 +142,20 @@
     <script src="static/js/jquery-2.1.1.min.js "></script>
     <script src="static/js/hideArrow.js "></script>
     <script src="static/js/slidebars.min.js "></script>
+
+
+
+
+            <script type="text/javascript">
+                $('#mtoggle').toggle(
+                function () {
+                document.getElementById('playTune').play();
+                },
+                function () {
+                document.getElementById('playTune').pause();
+                }
+                );
+			</script>
 
 
 

@@ -45,20 +45,23 @@ nav ul li a {
     font-weight: 900;
     text-transform: uppercase;
     text-decoration: none;
-    color: #444;
+    color: $victoria;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 nav ul li a:hover {
-    color: #C1272C;
+    color: $sanfrancisco;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }
 nav ul li a.active {
-    color: #C1272C;
-    border-bottom: #C1272C solid 1px;
+    color: $sanfrancisco;
+    border-bottom: $sanfrancisco solid 1px;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
+}
+nav ul li a.active::after {
+    color: $sanfrancisco;
 }
 .sb-slidebar ul {
     padding: 10px 5% 0 5%;
@@ -72,7 +75,7 @@ nav ul li a.active {
     font-size: 18px;
     text-transform: uppercase;
     text-decoration: none;
-    color: #444;
+    color: $victoria;
     -webkit-transition: all .3s ease;
     transition: all .3s ease;
 }

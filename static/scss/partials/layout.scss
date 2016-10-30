@@ -5,8 +5,8 @@
 html,
 body {
     font-family: 'Roboto Condensed', sans-serif;
-    background-color: #fff;
-    color: #1e1e1e;
+    background-color: $victoria;
+    color: $sydneyDark;
 }
 html {
     box-sizing: border-box;
@@ -44,7 +44,7 @@ select::-ms-expand {
     min-height: 100vh;*/
     position: relative;
     z-index: 1;
-    background-color: #fff;
+    background-color: $victoria;
 }
 
 /* ************************** 
@@ -52,7 +52,7 @@ select::-ms-expand {
 /* ************************** */
 
 .container {
-    background-color: #000;
+    background-color: $sydneyDark;
     position: relative;
     height: 100vh;
 }
@@ -82,10 +82,10 @@ select::-ms-expand {
     width: 100%;
 }
 .text-gradient {
-    background: rgba(18, 18, 18, 0.87);
-    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18, 18, 18, 0.87)), color-stop(100%, rgba(255, 252, 255, 0)));
-    background: -webkit-linear-gradient(top, rgba(18, 18, 18, 0.87) 0%, rgba(255, 252, 255, 0) 100%);
-    background: linear-gradient(to bottom, rgba(18, 18, 18, 0.87) 0%, rgba(255, 252, 255, 0) 100%);
+    background: rgba($black, 0.87);
+    background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba($black, 0.87)), color-stop(100%, rgba($white, 0)));
+    background: -webkit-linear-gradient(top, rgba($black, 0.87) 0%, rgba($white, 0) 100%);
+    background: linear-gradient(to bottom, rgba($black, 0.87) 0%, rgba($white, 0) 100%);
 }
 .middle {
     display: table-cell;
@@ -107,19 +107,19 @@ select::-ms-expand {
 }
 .inner h1,
 p {
-    color: #fff;
+    color: $white;
 }
 .footer-2 p {
-    color: #777;
+    color: $sydney;
 }
 .splash .inner h2 {
     font-size: 41px;
     font-family: 'Alegreya Sans', sans-serif;
     font-weight: 800;
-    color: #fff;
+    color: $white;
     width: 90%;
     margin: 0 auto;
-    text-shadow: #444 1px 1px 7px;
+    text-shadow: $sydneyDark 1px 1px 7px;
     position: relative;
     z-index: 10;
 }
@@ -200,7 +200,7 @@ p {
     font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
     letter-spacing: 4px;
     font-size: 19px;
-    color: chocolate;
+    color: $sanfrancisco;
     text-transform: uppercase;
     margin: 35px 0 -13px 0;
 }
@@ -209,8 +209,8 @@ input {
     font-size: 18px;
     padding: 12px 16px;
     margin-bottom: 11px;
-    border: 1px solid #ccc;
-    background-color: #fff;
+    border: 1px solid $sydneyLight;
+    background-color: $victoria;
     width: 100%;
     max-width: 500px;
 }
@@ -223,7 +223,7 @@ select {
     -webkit-appearance: none;
     height: 52px;
     border-radius: 0px;
-    background: #fff url(../images/selectBtn.png) no-repeat right;
+    background: $victoria url(../images/selectBtn.png) no-repeat right;
 }
 select:focus {
     outline: none;
@@ -237,14 +237,14 @@ select:focus {
 }*/
 
 .mailbtn {
-    color: #000;
+    color: $sydneyDark;
     padding: 16px 13px;
     width: 250px;
     margin: 23px auto 50px auto;
     display: block;
 }
 .mailbtn:hover {
-    background: red;
+    background: $sanfrancisco;
 }
 
 /* ***************************
@@ -263,7 +263,7 @@ select:focus {
     letter-spacing: 3px;
 }
 .footer a {
-    color: gold;
+    color: $wellington;
 }
 footer a:hover {
     opacity: .5;
@@ -291,7 +291,7 @@ footer a:hover {
         overflow: hidden;
         top: 0;
         left: 0;
-        background-color: #000;
+        background-color: $sydneyDark;
     }
     .home-image img {
         -o-object-fit: cover;
@@ -305,7 +305,7 @@ footer a:hover {
     }
     .inner h1,
     p {
-        color: #fff;
+        color: $victoria;
     }
     .inner h1 {
         font-size: 44px;

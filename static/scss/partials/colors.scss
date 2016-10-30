@@ -1,34 +1,40 @@
-/* ********************** 
-/* ***** MAIN COLOR ***** 
-/* ********************** */
+/* *********************** 
+/* ***** MAIN COLORS ***** 
+/* *********************** */
 
-.main-color {
-    background-color: rgba(24, 170, 144, .8);
-    border-color: rgba(24, 170, 144, .8);
-    color: rgba(24, 170, 144, .8);
-}
+$victoria: #eaeaea;
+$wellington: #c0d6df;
+$phoenix: #e8dab2;
+$sanfrancisco: #dd6e42;
+$sydney: #4f6d7a;
 
-/* ************************ 
-/* ***** ACCENT COLOR ***** 
-/* ************************ */
+$black: #000;
+$white: #fff;
+    
 
-.accent-color {
-    background-color: #E04229 !important;
-}
-.white {
-    background-color: #fff;
-}
-.purchase-button:hover {
-    color: #E04229;
-}
-nav ul li a.active::after {
-    color: #E04229;
-}
+/* **************************** 
+/* ***** MAIN COLOR MIXES ***** 
+/* **************************** */
 
-/* ********************* 
-/* ***** NAV COLOR ***** 
-/* ********************* */
+$victoriaLight: mix($white, $victoria, 30%);
+$victoriaDark: mix($wellington, $victoria, 30%);
 
-.nav-color {
-    background-color: rgba(75, 75, 75, .95);
-}
+$wellingtonLight: mix($victoria, $wellington, 30%);
+$wellingtonDark: mix($sydney, $wellington, 30%);
+
+$phoenixLight: mix($victoria, $phoenix, 30%);
+$phoenixDark: mix($sanfrancisco, $phoenix, 30%);
+
+$sanfranciscoLight: mix($phoenix, $sanfrancisco, 30%);
+$sanfranciscoDark: mix($sydney, $sanfrancisco, 30%);
+
+$sydneyLight: mix($wellington, $sydney, 30%);
+$sydneyDark: mix($black, $sydney, 30%);
+
+
+/* ***************************** 
+/* ***** OTHER COLOR MIXES ***** 
+/* ***************************** */
+
+$text: $sydney;
+$textDark: $sydneyDark;

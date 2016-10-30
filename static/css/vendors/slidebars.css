@@ -1,213 +1,71 @@
-/* -----------------------------------
- * Slidebars
- * Version 0.10.3
- * http://plugins.adchsm.me/slidebars/
- *
- * Written by Adam Smith
- * http://www.adchsm.me/
- *
- * Released under MIT License
- * http://plugins.adchsm.me/slidebars/license.txt
- *
- * -------------------
- * Slidebars CSS Index
- *
- * 001 - Box Model, Html & Body
- * 002 - Site
- * 003 - Slidebars
- * 004 - Animation
- * 005 - Helper Classes
- *
- * ----------------------------
- * 001 - Box Model, Html & Body
- */
-html,
-body,
-#wrapper,
-.sb-site-container,
-.sb-slidebar {
-  /* Set box model to prevent any user added margins or paddings from altering the widths or heights. */
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box; }
+/*
+Error: Undefined variable: "$sanfrancisco".
+        on line 104 of scss/vendors/slidebars.scss
 
-html,
-body {
-  width: 100%;
-  overflow-x: hidden;
-  /* Stops horizontal scrolling. */ }
+99:     top: 0;
+100:     z-index: 0;
+101:     /* Slidebars sit behind sb-site. *\/
+102:     display: none;
+103:     /* Initially hide the Slidebars. Changed from visibility to display to allow -webkit-overflow-scrolling. *\/
+104:     background-color: $sanfrancisco;
+105:     /* Default Slidebars background colour, overwrite this with your own css. *\/
+106: }
+107: .sb-slidebar,
+108: .sb-slidebar * {
+109:     -webkit-transform: translateZ( 0px);
 
-html {
-  height: 100%;
-  /* Site is as tall as device. */ }
-
-body {
-  min-height: 100%;
-  height: auto;
-  position: relative;
-  /* Required for static Slidebars to function properly. */ }
-
-/* Site scroll locking - prevent site from scrolling when a Slidebar is open, except when static Slidebars are only available. */
-html.sb-scroll-lock.sb-active:not(.sb-static) {
-  overflow: hidden; }
-
-/* ----------
- * 002 - Site
- */
-#wrapper,
-.sb-site-container {
-  /* You may now use class .sb-site-container instead of #wrapper and use your own id. However please make sure you don't set any of the following styles any differently on your id. */
-  width: 100%;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
-  /* Site sits above Slidebars */
-  background-color: #ffffff;
-  /* Default background colour, overwrite this with your own css. I suggest moving your html or body background styling here. Making this transparent will allow the Slidebars beneath to be visible. */ }
-
-/* Micro clearfix by Nicolas Gallagher, ensures the site container hits the top and bottom of the screen. */
-#wrapper:before,
-#wrapper:after,
-.sb-site-container:before,
-.sb-site-container:after {
-  content: ' ';
-  display: table; }
-
-#wrapper:before,
-#wrapper:after,
-.sb-site-container:before,
-.sb-site-container:after {
-  clear: both; }
-
-/* ---------------
- * 003 - Slidebars
- */
-.sb-slidebar {
-  height: 100%;
-  overflow-y: auto;
-  /* Enable vertical scrolling on Slidebars when needed. */
-  position: fixed;
-  top: 0;
-  z-index: 0;
-  /* Slidebars sit behind sb-site. */
-  display: none;
-  /* Initially hide the Slidebars. Changed from visibility to display to allow -webkit-overflow-scrolling. */
-  background-color: #222222;
-  /* Default Slidebars background colour, overwrite this with your own css. */ }
-
-.sb-slidebar,
-.sb-slidebar * {
-  -webkit-transform: translateZ(0px);
-  /* Fixes issues with translated and z-indexed elements on iOS 7. */ }
-
-.sb-left {
-  left: 0;
-  /* Set Slidebar to the left. */ }
-
-.sb-right {
-  right: 0;
-  /* Set Slidebar to the right. */ }
-
-html.sb-static .sb-slidebar,
-.sb-slidebar.sb-static {
-  position: absolute;
-  /* Makes Slidebars scroll naturally with the site, and unfixes them for Android Browser < 3 and iOS < 5. */ }
-
-.sb-slidebar.sb-active {
-  display: block;
-  /* Makes Slidebars visibile when open. Changed from visibility to display to allow -webkit-overflow-scrolling. */ }
-
-.sb-style-overlay {
-  z-index: 9999;
-  /* Set z-index high to ensure it overlays any other site elements. */ }
-
-.sb-momentum-scrolling {
-  -webkit-overflow-scrolling: touch;
-  /* Adds native momentum scrolling for iOS & Android devices. */ }
-
-/* Slidebar widths for browsers/devices that don't support media queries. */
-.sb-slidebar {
-  width: 30%; }
-
-.sb-width-thin {
-  width: 15%; }
-
-.sb-width-wide {
-  width: 45%; }
-
-@media (max-width: 480px) {
-  /* Slidebar widths on extra small screens. */
-  .sb-slidebar {
-    width: 70%; }
-
-  .sb-width-thin {
-    width: 55%; }
-
-  .sb-width-wide {
-    width: 85%; } }
-@media (min-width: 481px) {
-  /* Slidebar widths on small screens. */
-  .sb-slidebar {
-    width: 55%; }
-
-  .sb-width-thin {
-    width: 40%; }
-
-  .sb-width-wide {
-    width: 70%; } }
-@media (min-width: 768px) {
-  /* Slidebar widths on medium screens. */
-  .sb-slidebar {
-    width: 40%; }
-
-  .sb-width-thin {
-    width: 25%; }
-
-  .sb-width-wide {
-    width: 55%; } }
-@media (min-width: 992px) {
-  /* Slidebar widths on large screens. */
-  .sb-slidebar {
-    width: 30%; }
-
-  .sb-width-thin {
-    width: 15%; }
-
-  .sb-width-wide {
-    width: 45%; } }
-@media (min-width: 1200px) {
-  /* Slidebar widths on extra large screens. */
-  .sb-slidebar {
-    width: 20%; }
-
-  .sb-width-thin {
-    width: 5%; }
-
-  .sb-width-wide {
-    width: 35%; } }
-/* ---------------
- * 004 - Animation
- */
-.sb-slide,
-#wrapper,
-.sb-site-container,
-.sb-slidebar {
-  -webkit-transform: translate(0px);
-  transform: translate(0px);
-  -webkit-transition: -webkit-transform 400ms ease;
-  transition: -webkit-transform 400ms ease;
-  transition: transform 400ms ease;
-  transition: transform 400ms ease, -webkit-transform 400ms ease;
-  -webkit-transition-property: -webkit-transform, left, right;
-  /* Add left/right for Android < 4.4. */
-  -webkit-backface-visibility: hidden;
-  /* Prevents flickering. This is non essential, and you may remove it if your having problems with fixed background images in Chrome. */ }
-
-/* --------------------
- * 005 - Helper Classes
- */
-.sb-hide {
-  display: none;
-  /* Optionally applied to control classes when Slidebars is disabled over a certain width. */ }
-
-/*# sourceMappingURL=slidebars.css.map */
+Backtrace:
+scss/vendors/slidebars.scss:104
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$sanfrancisco\".\A         on line 104 of scss/vendors/slidebars.scss\A \A 99:     top: 0;\A 100:     z-index: 0;\A 101:     /* Slidebars sit behind sb-site. */\A 102:     display: none;\A 103:     /* Initially hide the Slidebars. Changed from visibility to display to allow -webkit-overflow-scrolling. */\A 104:     background-color: $sanfrancisco;\A 105:     /* Default Slidebars background colour, overwrite this with your own css. */\A 106: }\A 107: .sb-slidebar,\A 108: .sb-slidebar * {\A 109:     -webkit-transform: translateZ( 0px);"; }

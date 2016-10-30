@@ -1,383 +1,71 @@
-/* CSS Document */
-html,
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-  background-color: #fff;
-  color: #1e1e1e; }
+/*
+Error: Undefined variable: "$victoria".
+        on line 8 of scss/partials/layout.scss
 
-html {
-  box-sizing: border-box; }
+3: /* CSS Document *\/
+4: 
+5: html,
+6: body {
+7:     font-family: 'Roboto Condensed', sans-serif;
+8:     background-color: $victoria;
+9:     color: $sydneyDark;
+10: }
+11: html {
+12:     box-sizing: border-box;
+13: }
 
-*,
-*::after,
-*::before {
-  box-sizing: inherit; }
-
-/* ****************** 
-/* ***** GLOBAL ***** 
-/* ****************** */
-.standard {
-  padding: 90px 5%; }
-
-select::-ms-expand {
-  display: none; }
-
-.clearfix {
-  width: 100%;
-  height: 0;
-  clear: both; }
-
-.anchor {
-  display: block;
-  height: 90px;
-  margin-top: -90px;
-  visibility: hidden; }
-
-#wrapper {
-  /*width: 100%;
-  height:100%;
-  min-height: 100vh;*/
-  position: relative;
-  z-index: 1;
-  background-color: #fff; }
-
-/* ************************** 
-/* ***** BIG HOME IMAGE ***** 
-/* ************************** */
-.container {
-  background-color: #000;
-  position: relative;
-  height: 100vh; }
-
-.home-image {
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  display: block;
-  overflow: hidden;
-  top: 0;
-  left: 0; }
-
-.home-image img {
-  -o-object-fit: cover;
-  object-fit: cover;
-  width: 100%;
-  height: 100%;
-  position: absolute;
-  left: 0;
-  top: 0;
-  overflow: hidden; }
-
-.outer {
-  display: table;
-  position: absolute;
-  height: 100%;
-  width: 100%; }
-
-.text-gradient {
-  background: rgba(18, 18, 18, 0.87);
-  background: -webkit-gradient(left top, left bottom, color-stop(0%, rgba(18, 18, 18, 0.87)), color-stop(100%, rgba(255, 252, 255, 0)));
-  background: -webkit-linear-gradient(top, rgba(18, 18, 18, 0.87) 0%, rgba(255, 252, 255, 0) 100%);
-  background: linear-gradient(to bottom, rgba(18, 18, 18, 0.87) 0%, rgba(255, 252, 255, 0) 100%); }
-
-.middle {
-  display: table-cell;
-  vertical-align: top; }
-
-.splash .inner {
-  margin: 0px 0 0 24px;
-  width: 260px;
-  list-style-position: inside; }
-
-.inner {
-  margin: 35px auto;
-  width: 260px;
-  list-style-position: inside; }
-
-.mobile {
-  margin: 90% 0 0 24px;
-  width: 295px; }
-
-.inner h1,
-p {
-  color: #fff; }
-
-.footer-2 p {
-  color: #777; }
-
-.splash .inner h2 {
-  font-size: 41px;
-  font-family: 'Alegreya Sans', sans-serif;
-  font-weight: 800;
-  color: #fff;
-  width: 90%;
-  margin: 0 auto;
-  text-shadow: #444 1px 1px 7px;
-  position: relative;
-  z-index: 10; }
-
-.inner p {
-  font-size: 15px;
-  line-height: 20px;
-  margin-top: 11px;
-  font-family: "Roboto", sans-serif; }
-
-@-webkit-keyframes bounce {
-  0%,
-    20%,
-    50%,
-    80%,
-    100% {
-    -webkit-transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-30px); }
-  60% {
-    -webkit-transform: translateY(-15px); } }
-@keyframes bounce {
-  0%,
-    20%,
-    50%,
-    80%,
-    100% {
-    -webkit-transform: translateY(0);
-    transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-30px);
-    transform: translateY(-30px); }
-  60% {
-    -webkit-transform: translateY(-15px);
-    transform: translateY(-15px); } }
-.arrow {
-  position: fixed;
-  bottom: 0;
-  left: 50%;
-  z-index: 99;
-  margin-left: -20px;
-  width: 30px;
-  height: 30px;
-  background-image: url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4NCjwhLS0gR2VuZXJhdG9yOiBBZG9iZSBJbGx1c3RyYXRvciAxNi4wLjAsIFNWRyBFeHBvcnQgUGx1Zy1JbiAuIFNWRyBWZXJzaW9uOiA2LjAwIEJ1aWxkIDApICAtLT4NCjwhRE9DVFlQRSBzdmcgUFVCTElDICItLy9XM0MvL0RURCBTVkcgMS4xLy9FTiIgImh0dHA6Ly93d3cudzMub3JnL0dyYXBoaWNzL1NWRy8xLjEvRFREL3N2ZzExLmR0ZCI+DQo8c3ZnIHZlcnNpb249IjEuMSIgaWQ9IkxheWVyXzEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHg9IjBweCIgeT0iMHB4IiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiIHZpZXdCb3g9IjAgMCA1MTIgNTEyIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIiB4bWw6c3BhY2U9InByZXNlcnZlIj4NCjxwYXRoIGZpbGw9IiNGRkZGRkYiIGQ9Ik0yOTMuNzUxLDQ1NS44NjhjLTIwLjE4MSwyMC4xNzktNTMuMTY1LDE5LjkxMy03My42NzMtMC41OTVsMCwwYy0yMC41MDgtMjAuNTA4LTIwLjc3My01My40OTMtMC41OTQtNzMuNjcyICBsMTg5Ljk5OS0xOTBjMjAuMTc4LTIwLjE3OCw1My4xNjQtMTkuOTEzLDczLjY3MiwwLjU5NWwwLDBjMjAuNTA4LDIwLjUwOSwyMC43NzIsNTMuNDkyLDAuNTk1LDczLjY3MUwyOTMuNzUxLDQ1NS44Njh6Ii8+DQo8cGF0aCBmaWxsPSIjRkZGRkZGIiBkPSJNMjIwLjI0OSw0NTUuODY4YzIwLjE4LDIwLjE3OSw1My4xNjQsMTkuOTEzLDczLjY3Mi0wLjU5NWwwLDBjMjAuNTA5LTIwLjUwOCwyMC43NzQtNTMuNDkzLDAuNTk2LTczLjY3MiAgbC0xOTAtMTkwYy0yMC4xNzgtMjAuMTc4LTUzLjE2NC0xOS45MTMtNzMuNjcxLDAuNTk1bDAsMGMtMjAuNTA4LDIwLjUwOS0yMC43NzIsNTMuNDkyLTAuNTk1LDczLjY3MUwyMjAuMjQ5LDQ1NS44Njh6Ii8+DQo8L3N2Zz4=);
-  background-size: contain; }
-
-.bounce {
-  -webkit-animation: bounce 2s infinite;
-  animation: bounce 2s infinite; }
-
-/* ****************** 
-/* ***** FORM ***** 
-/* ****************** */
-#editor_holder {
-  clear: both;
-  margin: 40px auto 0 auto;
-  text-align: center;
-  width: 100%;
-  max-width: 500px; }
-
-#editor_holder div {
-  border: none !important; }
-
-#editor_holder h3 span {
-  display: none; }
-
-#editor_holder .row h3 span {
-  display: block;
-  font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  letter-spacing: 4px;
-  font-size: 19px;
-  color: chocolate;
-  text-transform: uppercase;
-  margin: 35px 0 -13px 0; }
-
-input {
-  font-size: 18px;
-  padding: 12px 16px;
-  margin-bottom: 11px;
-  border: 1px solid #ccc;
-  background-color: #fff;
-  width: 100%;
-  max-width: 500px; }
-
-select {
-  font-size: 18px;
-  padding: 12px 16px;
-  width: 100%;
-  box-shadow: none;
-  background: transparent;
-  -webkit-appearance: none;
-  height: 52px;
-  border-radius: 0px;
-  background: #fff url(../images/selectBtn.png) no-repeat right; }
-
-select:focus {
-  outline: none; }
-
-/*input[type=submit] {
-    border: 0 none;
-    cursor: pointer;
-    -webkit-appearance: none;
-    border-radius: 0;
-}*/
-.mailbtn {
-  color: #000;
-  padding: 16px 13px;
-  width: 250px;
-  margin: 23px auto 50px auto;
-  display: block; }
-
-.mailbtn:hover {
-  background: red; }
-
-/* ***************************
-/* ***************************
-/* ******** FOOTER *********** 
-/* ***************************
-/* *************************** */
-.footer {
-  font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
-  text-align: center;
-  padding: 40px 20px;
-  text-transform: uppercase;
-  font-size: 10px;
-  line-height: 14px;
-  letter-spacing: 3px; }
-
-.footer a {
-  color: gold; }
-
-footer a:hover {
-  opacity: .5;
-  -webkit-transition: all .3s ease;
-  transition: all .3s ease; }
-
-/* *************************** 
-/* ****** Media Queries ****** 
-/* *************************** 
-/* *************************** 
-/* ****** 768 and wider ****** 
-/* *************************** */
-@media only screen and (min-width: 768px) {
-  .inner {
-    margin: 219px 0 0 92px;
-    width: 345px; }
-
-  .home-image {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    display: block;
-    overflow: hidden;
-    top: 0;
-    left: 0;
-    background-color: #000; }
-
-  .home-image img {
-    -o-object-fit: cover;
-    object-fit: cover;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    overflow: hidden; }
-
-  .inner h1,
-  p {
-    color: #fff; }
-
-  .inner h1 {
-    font-size: 44px;
-    margin: 0 0 8px 0; }
-
-  .inner p {
-    font-family: "Roboto", sans-serif;
-    font-size: 17px;
-    line-height: 28px;
-    margin-top: 16px; } }
-/* *************************** 
-/* ****** Media Queries ****** 
-/* *************************** 
-/* *************************** 
-/* ***** 1024 and wider ****** 
-/* *************************** */
-@media only screen and (min-width: 1024px) {
-  .inner {
-    margin: 40px auto 0 auto;
-    width: 680px; }
-
-  .arrow {
-    width: 40px;
-    height: 40px; }
-
-  .inner h1 {
-    font-size: 49px;
-    margin: 0 0 8px 0; }
-
-  .inner p {
-    font-family: "RobotoLight", sans-serif;
-    font-size: 22px;
-    line-height: 31px;
-    margin-top: 16px; } }
-@media only screen and (max-width: 599px) {
-  .splash .inner {
-    width: 100%;
-    padding: 10px;
-    margin: 40px 0 0 0; }
-
-  .splash .inner h2 {
-    font-size: 30px;
-    line-height: 32px;
-    text-align: center; }
-
-  .splash .inner h2:nth-child(2) {
-    margin-top: 10px;
-    font-size: 17px;
-    font-weight: 400;
-    font-family: 'Alegreya Sans', sans-serif; } }
-@media only screen and (max-height: 415px) {
-  .splash .inner {
-    width: 400px; }
-
-  .splash .inner h2 {
-    font-size: 30px; }
-
-  .inner {
-    margin: 0px auto 0 auto;
-    width: 400px; }
-
-  h1 {
-    margin: 0 0 0.45em; }
-
-  .inner h1 {
-    font-size: 26px; } }
-/* ************************** 
-/* **************************
-/* ***** RESPONSIVE 767 *****
-/* **************************
-/* ************************** */
-@media screen and (max-width: 767px) {
-  .summary,
-  .dateloc,
-  .details-container,
-  .details-container .details {
-    display: block; } }
-/* ************************** 
-/* **************************
-/* ***** RESPONSIVE 580 ***** 
-/* **************************
-/* ************************** */
-@media screen and (max-width: 580px) {
-  header section {
-    padding: 120px 5% 35px 5%; }
-
-  header h1 {
-    font-size: 60px;
-    line-height: 60px; }
-
-  header h2,
-  header h3 {
-    font-size: 25px;
-    line-height: 30px; }
-
-  header .purchase-button {
-    margin: 20px auto 40px auto; } }
-
-/*# sourceMappingURL=layout.css.map */
+Backtrace:
+scss/partials/layout.scss:8
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/variable.rb:49:in `_perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/node.rb:50:in `perform'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:167:in `block in visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:166:in `visit_children'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:186:in `visit_root'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:157:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:378:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/engine.rb:295:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:490:in `update_stylesheet'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:470:in `on_file_changed'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/plugin/compiler.rb:328:in `block in watch'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:252:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:254:in `call'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:254:in `report_changes'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:323:in `poll_changed_directories'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Undefined variable: \"$victoria\".\A         on line 8 of scss/partials/layout.scss\A \A 3: /* CSS Document */\A 4: \A 5: html,\A 6: body {\A 7:     font-family: 'Roboto Condensed', sans-serif;\A 8:     background-color: $victoria;\A 9:     color: $sydneyDark;\A 10: }\A 11: html {\A 12:     box-sizing: border-box;\A 13: }"; }
