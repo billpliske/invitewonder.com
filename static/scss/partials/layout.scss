@@ -64,7 +64,6 @@ select::-ms-expand {
     overflow: hidden;
     top: 0;
     left: 0;
-    /*background-color: #000;*/
 }
 .home-image img {
     -o-object-fit: cover;
@@ -121,6 +120,8 @@ p {
     width: 90%;
     margin: 0 auto;
     text-shadow: #444 1px 1px 7px;
+    position: relative;
+    z-index: 10;
 }
 .inner p {
     font-size: 15px;

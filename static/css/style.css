@@ -121,52 +121,9 @@ video {
   vertical-align: baseline;
   font-weight: normal; }
 
-/* CSS Document */
-html,
-body {
-  font-family: 'Roboto Condensed', sans-serif;
-  background-color: #fff;
-  color: #1e1e1e; }
-
-html {
-  box-sizing: border-box; }
-
-*,
-*::after,
-*::before {
-  box-sizing: inherit; }
-
-/* ****************** 
-/* ***** GLOBAL ***** 
-/* ****************** */
-.standard {
-  padding: 90px 5%; }
-
-select::-ms-expand {
-  display: none; }
-
-.clearfix {
-  width: 100%;
-  height: 0;
-  clear: both; }
-
-.anchor {
-  display: block;
-  height: 90px;
-  margin-top: -90px;
-  visibility: hidden; }
-
-#wrapper {
-  /*width: 100%;
-  height:100%;
-  min-height: 100vh;*/
-  position: relative;
-  z-index: 1;
-  background-color: #fff; }
-
-/* *************** 
-/* ***** NAV ***** 
-/* *************** */
+/* ********************** 
+/* ***** NAVIGATION ***** 
+/* ********************** */
 nav {
   position: fixed;
   width: 100%;
@@ -246,6 +203,58 @@ nav ul li a.active {
   -webkit-transition: all .3s ease;
   transition: all .3s ease; }
 
+/* *************************** 
+/* ****** Media Queries ****** 
+/* *************************** 
+/* *************************** 
+/* ****** 768 and wider ****** 
+/* *************************** */
+@media only screen and (min-width: 768px) {
+  nav ul {
+    display: inline-block; } }
+/* CSS Document */
+html,
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+  background-color: #fff;
+  color: #1e1e1e; }
+
+html {
+  box-sizing: border-box; }
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit; }
+
+/* ****************** 
+/* ***** GLOBAL ***** 
+/* ****************** */
+.standard {
+  padding: 90px 5%; }
+
+select::-ms-expand {
+  display: none; }
+
+.clearfix {
+  width: 100%;
+  height: 0;
+  clear: both; }
+
+.anchor {
+  display: block;
+  height: 90px;
+  margin-top: -90px;
+  visibility: hidden; }
+
+#wrapper {
+  /*width: 100%;
+  height:100%;
+  min-height: 100vh;*/
+  position: relative;
+  z-index: 1;
+  background-color: #fff; }
+
 /* ************************** 
 /* ***** BIG HOME IMAGE ***** 
 /* ************************** */
@@ -261,8 +270,7 @@ nav ul li a.active {
   display: block;
   overflow: hidden;
   top: 0;
-  left: 0;
-  /*background-color: #000;*/ }
+  left: 0; }
 
 .home-image img {
   -o-object-fit: cover;
@@ -318,7 +326,9 @@ p {
   color: #fff;
   width: 90%;
   margin: 0 auto;
-  text-shadow: #444 1px 1px 7px; }
+  text-shadow: #444 1px 1px 7px;
+  position: relative;
+  z-index: 10; }
 
 .inner p {
   font-size: 15px;
@@ -495,10 +505,7 @@ footer a:hover {
     font-family: "Roboto", sans-serif;
     font-size: 17px;
     line-height: 28px;
-    margin-top: 16px; }
-
-  nav ul {
-    display: inline-block; } }
+    margin-top: 16px; } }
 /* *************************** 
 /* ****** Media Queries ****** 
 /* *************************** 
@@ -557,23 +564,6 @@ footer a:hover {
     font-size: 26px; } }
 /* ************************** 
 /* **************************
-/* **** HEADER AND MENU ***** 
-/* **************************
-/* ************************** */
-/* **************************
-/* ************************** 
-/* ***** RESPONSIVE 800 ***** 
-/* **************************
-/* ************************** */
-@media screen and (max-width: 800px) {
-  nav .mainlogo {
-    width: 240px;
-    margin: 12px; }
-
-  nav ul {
-    margin-left: 15px; } }
-/* ************************** 
-/* **************************
 /* ***** RESPONSIVE 767 *****
 /* **************************
 /* ************************** */
@@ -582,19 +572,7 @@ footer a:hover {
   .dateloc,
   .details-container,
   .details-container .details {
-    display: block; }
-
-  nav .sb-toggle-left {
-    display: inline-block;
-    vertical-align: top;
-    position: absolute;
-    right: 0px; }
-
-  nav ul {
-    display: none; }
-
-  nav .mainlogo {
-    width: 200px; } }
+    display: block; } }
 /* ************************** 
 /* **************************
 /* ***** RESPONSIVE 580 ***** 

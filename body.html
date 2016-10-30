@@ -6,7 +6,7 @@
     <nav class="sb-slide white">
 
 
-     <!--<img src="static/images/logo_invite_wonder.png" class="mainlogo">-->
+        <!--<img src="static/images/logo_invite_wonder.png" class="mainlogo">-->
 
         <ul>
             <li><a href="#top" class="active">Home</a></li>
@@ -29,29 +29,36 @@
             <!--<img src="static/images/logo_invite_wonder_white.png" class="mainlogo">-->
         </nav>
 
+        <!-- //////////////////// -->
+        <!-- AUDIO LOOP -->
+        <!-- //////////////////// -->
+        <!--<audio loop autoplay>
+    <source src="static/images/home/war_loop.ogg" type="audio/ogg">
+    <source src="static/images/home/war_loop.mp3" type="audio/mpeg"> Your browser does not support the audio element.
+</audio>-->
+
 
         <!-- //////////////////// -->
         <!-- SECTION SPLASH -->
         <!-- //////////////////// -->
 
         <section class="splash">
-            <div class="container" style="background-color:white;">
+            <div class="container">
                 <div class="home-image">
-                    <img src="{{ configData.splash_phone}}" srcset="{{ configData.splash_old }}, 
-                                 {{ configData.splash_phone }}, 
-                                 {{ configData.splash_desktop }}" sizes="100vw">
+                    <img class="fog-background" src="static/images/themes/fog.png">
+                    <img src="{{ configData.splash_phone}} " srcset="{{ configData.splash_old }}, {{ configData.splash_phone }}, {{ configData.splash_desktop }} " sizes="100vw ">
                 </div>
                 <div class="outer">
-                    <div class="text-gradient">
-                        <div class="middle">
-                            <div class="inner">
+                    <div class="text-gradient ">
+                        <div class="middle ">
+                            <div class="inner ">
                                 <h2>To celebrate {{ configData.user_name }} turning {{ configData.user_age }}, we could use your help.</h2>
                                 <h2>(To kill some zombies.)</h2>
 
                             </div>
                         </div>
                     </div>
-                    <div class="arrow bounce hideArrow"></div>
+                    <div class="arrow bounce hideArrow "></div>
                 </div>
             </div>
         </section>
@@ -63,20 +70,20 @@
         <!-- SECTION XXXXXXX -->
         <!-- //////////////////// -->
 
-        <div class="container" style="background-color:white;">
-            <div class="home-image">
+        <div class="container " style="background-color:white; ">
+            <div class="home-image ">
 
             </div>
-            <div class="outer">
-                <div class="middle">
-                    <div class="inner">
+            <div class="outer ">
+                <div class="middle ">
+                    <div class="inner ">
 
                         <!-- ---------------- -->
                         <!-- FORM STARTS HERE -->
                         <!-- ---------------- -->
-                        <div id="editor_holder"></div>
+                        <div id="editor_holder "></div>
                         <!-- THE SUBMIT BUTTON -->
-                        <input id="submit" type="submit" value="Submit" class="mailbtn" />
+                        <input id="submit " type="submit " value="Submit " class="mailbtn " />
                         <!-- ---------------- -->
                         <!-- FORM ENDS HERE -->
                         <!-- ---------------- -->
@@ -90,9 +97,9 @@
         <!-- //////////////////// -->
         <!-- FOOTER -->
         <!-- //////////////////// -->
-        <!--<footer class="nav-color">
-        <p class="footer">
-            Website design by <a href="http://www.sixfiveagency.com" target="_new">SixFiveAgency.com</a>.
+        <!--<footer class="nav-color ">
+        <p class="footer ">
+            Website design by <a href="http://www.sixfiveagency.com " target="_new ">SixFiveAgency.com</a>.
         </p>
     </footer>-->
 
@@ -101,22 +108,22 @@
 
 
     <!-- MOBILE SLIDE MENU -->
-    <div class="sb-slidebar sb-left sb-momentum-scrolling accent-color">
+    <div class="sb-slidebar sb-left sb-momentum-scrolling accent-color ">
         <ul>
-            <li><a href="#top" class="sb-close active">Home</a></li>
-            <li><a href="#gallery" class="sb-close">Gallery</a></li>
-            <li><a href="#buy" class="sb-close">Purchase</a></li>
-            <li><a href="#faq" class="sb-close">FAQ</a></li>
-            <li><a href="#contact" class="sb-close">Contact</a></li>
+            <li><a href="#top " class="sb-close active ">Home</a></li>
+            <li><a href="#gallery " class="sb-close ">Gallery</a></li>
+            <li><a href="#buy " class="sb-close ">Purchase</a></li>
+            <li><a href="#faq " class="sb-close ">FAQ</a></li>
+            <li><a href="#contact " class="sb-close ">Contact</a></li>
         </ul>
     </div>
 
 
 
     <!-- JS -->
-    <script src="static/js/jquery-2.1.1.min.js"></script>
-    <script src="static/js/hideArrow.js"></script>
-    <script src="static/js/slidebars.min.js"></script>
+    <script src="static/js/jquery-2.1.1.min.js "></script>
+    <script src="static/js/hideArrow.js "></script>
+    <script src="static/js/slidebars.min.js "></script>
 
 
 
@@ -145,111 +152,111 @@
 
         var editor = new JSONEditor(document.getElementById('editor_holder'), {
             schema: {
-                type: "object",
-                title: "object",
+                type: "object ",
+                title: "object ",
                 options: {
                     disable_collapse: true,
                     disable_edit_json: true,
                     disable_properties: true
                 },
                 properties: {
-                    "requester": {
-                        "type": "object",
-                        "title": "About Requester",
+                    "requester ": {
+                        "type ": "object ",
+                        "title ": "About Requester ",
                         options: {
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
                         },
-                        "properties": {
-                            "firstname": {
-                                "type": "string",
-                                "title": "Your Name",
-                                placeholder: "Your name"
+                        "properties ": {
+                            "firstname ": {
+                                "type ": "string ",
+                                "title ": "Your Name ",
+                                placeholder: "Your name "
                             },
-                            "email": {
-                                "type": "string",
-                                "title": "Email"
+                            "email ": {
+                                "type ": "string ",
+                                "title ": "Email "
                             }
                         }
                     },
-                    "person": {
-                        "type": "object",
-                        "title": "About Person",
+                    "person ": {
+                        "type ": "object ",
+                        "title ": "About Person ",
                         options: {
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
                         },
-                        "properties": {
-                            "firstname": {
-                                "type": "string",
-                                "title": "First Name"
+                        "properties ": {
+                            "firstname ": {
+                                "type ": "string ",
+                                "title ": "First Name "
                             }
                         }
                     },
-                    "event": {
-                        "type": "object",
-                        "title": "About the event",
+                    "event ": {
+                        "type ": "object ",
+                        "title ": "About the event ",
                         options: {
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
                         },
-                        "properties": {
-                            "address": {
-                                "type": "string",
-                                "title": "Street Address"
+                        "properties ": {
+                            "address ": {
+                                "type ": "string ",
+                                "title ": "Street Address "
                             },
-                            "time": {
-                                "type": "string",
-                                "title": "Time"
+                            "time ": {
+                                "type ": "string ",
+                                "title ": "Time "
                             },
-                            "address": {
-                                "type": "string",
-                                "title": "Address"
+                            "address ": {
+                                "type ": "string ",
+                                "title ": "Address "
                             },
-                            "city": {
-                                "type": "string",
-                                "title": "City"
+                            "city ": {
+                                "type ": "string ",
+                                "title ": "City "
                             },
-                            "state": {
-                                "type": "string",
-                                "title": "State"
+                            "state ": {
+                                "type ": "string ",
+                                "title ": "State "
                             },
-                            "zip": {
-                                "type": "string",
-                                "title": "Zip"
+                            "zip ": {
+                                "type ": "string ",
+                                "title ": "Zip "
                             },
-                            "phone": {
-                                "type": "string",
-                                "title": "Phone"
+                            "phone ": {
+                                "type ": "string ",
+                                "title ": "Phone "
                             },
-                            "rsvp_deadline": {
-                                "type": "string",
-                                "title": "RSVP deadline"
+                            "rsvp_deadline ": {
+                                "type ": "string ",
+                                "title ": "RSVP deadline "
                             }
                         }
                     },
-                    "theme": {
-                        "type": "object",
-                        "title": "Choose a theme",
+                    "theme ": {
+                        "type ": "object ",
+                        "title ": "Choose a theme ",
                         options: {
                             disable_collapse: true,
                             disable_edit_json: true,
                             disable_properties: true
                         },
-                        "properties": {
-                            "themeName": {
-                                "type": "string",
-                                "enum": [
-                                    "Space & Aliens",
-                                    "Video games",
-                                    "Jungle",
-                                    "Superhero",
-                                    "Horror/Scary"
+                        "properties ": {
+                            "themeName ": {
+                                "type ": "string ",
+                                "enum ": [
+                                    "Space & Aliens ",
+                                    "Video games ",
+                                    "Jungle ",
+                                    "Superhero ",
+                                    "Horror/Scary "
                                 ],
-                                "default": "Space & Aliens"
+                                "default ": "Space & Aliens "
                             }
                         }
                     }
