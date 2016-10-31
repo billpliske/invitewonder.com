@@ -1,0 +1,68 @@
+/* ****************** 
+/* ***** FORM ***** 
+/* ****************** */
+
+.form {
+    #editor_holder {
+        clear: both;
+        margin: 40px auto 0 auto;
+        text-align: center;
+        width: 100%;
+        max-width: 500px;
+    }
+    #editor_holder div {
+        border: none!important;
+    }
+    #editor_holder h3 span {
+        display: none
+    }
+    #editor_holder .row h3 span {
+        display: block;
+        font-family: 'Roboto Condensed', "Helvetica Neue", Helvetica, Arial, sans-serif;
+        letter-spacing: 4px;
+        font-size: 19px;
+        color: $sanfrancisco;
+        text-transform: uppercase;
+        margin: 35px 0 -13px 0;
+    }
+    .form-control {}
+    input {
+        font-size: 18px;
+        padding: 12px 16px;
+        margin-bottom: 11px;
+        border: 1px solid $sydneyLight;
+        background-color: $victoria;
+        width: 100%;
+        max-width: 500px;
+    }
+    select {
+        font-size: 18px;
+        padding: 12px 16px;
+        width: 100%;
+        box-shadow: none;
+        background: transparent;
+        -webkit-appearance: none;
+        height: 52px;
+        border-radius: 0px;
+        background: $victoria url(../images/selectBtn.png) no-repeat right;
+    }
+    select:focus {
+        outline: none;
+    }
+    /*input[type=submit] {
+    border: 0 none;
+    cursor: pointer;
+    -webkit-appearance: none;
+    border-radius: 0;
+}*/
+    .mailbtn {
+        color: $sydneyDark;
+        padding: 16px 13px;
+        width: 250px;
+        margin: 23px auto 50px auto;
+        display: block;
+    }
+    .mailbtn:hover {
+        background: $sanfrancisco;
+    }
+}

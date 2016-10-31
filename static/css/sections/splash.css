@@ -1,24 +1,35 @@
 /*
-Error: Undefined variable: "$victoria".
-        on line 13 of scss/partials/layout.scss
+Error: Undefined variable: "$sydneyDark".
+        on line 7 of scss/sections/splash.scss
 
-8: /* ****************** *\/
-9: 
-10: html,
-11: body {
-12:     font-family: 'Roboto Condensed', sans-serif;
-13:     background-color: $victoria;
-14:     color: $sydneyDark;
-15: }
-16: html {
-17:     box-sizing: border-box;
-18: }
+2: /* ***** SPLASH ***** 
+3: /* ************************** *\/
+4: 
+5: .splash {
+6:     .container {
+7:         background-color: $sydneyDark;
+8:         position: relative;
+9:         height: 100vh;
+10:     }
+11:     .home-image {
+12:         position: absolute;
 
 Backtrace:
-scss/partials/layout.scss:13
+scss/sections/splash.scss:7
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/variable.rb:49:in `_perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/script/tree/node.rb:50:in `perform'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:395:in `visit_prop'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:115:in `with_frame'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `with_base'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `visit'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block (2 levels) in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `map'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:431:in `block in visit_rule'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:179:in `with_environment'
+/Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:429:in `visit_rule'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/base.rb:36:in `visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/tree/visitors/perform.rb:158:in `block in visit'
 /Library/Ruby/Gems/2.0.0/gems/sass-3.4.20/lib/sass/stack.rb:79:in `block in with_base'
@@ -68,4 +79,4 @@ scss/partials/layout.scss:13
 body:before {
   white-space: pre;
   font-family: monospace;
-  content: "Error: Undefined variable: \"$victoria\".\A         on line 13 of scss/partials/layout.scss\A \A 8: /* ****************** */\A 9: \A 10: html,\A 11: body {\A 12:     font-family: 'Roboto Condensed', sans-serif;\A 13:     background-color: $victoria;\A 14:     color: $sydneyDark;\A 15: }\A 16: html {\A 17:     box-sizing: border-box;\A 18: }"; }
+  content: "Error: Undefined variable: \"$sydneyDark\".\A         on line 7 of scss/sections/splash.scss\A \A 2: /* ***** SPLASH ***** \A 3: /* ************************** */\A 4: \A 5: .splash {\A 6:     .container {\A 7:         background-color: $sydneyDark;\A 8:         position: relative;\A 9:         height: 100vh;\A 10:     }\A 11:     .home-image {\A 12:         position: absolute;"; }
