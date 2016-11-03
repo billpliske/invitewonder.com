@@ -3,10 +3,10 @@
 
     <!-- FIXED NAVIGATION BAR -->
 
-    <nav class="sb-slide white">
+    <!-- <nav class="sb-slide white">
 
-
-        <!--<img src="static/images/logo_invite_wonder.png" class="mainlogo">-->
+        <img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
+        <img src="static/images/logo_invite_wonder.png" class="mainlogo">
 
         <ul>
             <li><a href="#top" class="active">Home</a></li>
@@ -16,7 +16,7 @@
             <li><a href="#contact">Contact</a></li>
         </ul>
         </div>
-    </nav>
+    </nav>-->
 
 
 
@@ -26,11 +26,11 @@
 
 
     <div id="wrapper">
-
+        <!--
         <nav>
-            <img src="static/images/nav-menu-toggle.png" class="sb-toggle-left">
-            <!--<img src="static/images/logo_invite_wonder_white.png" class="mainlogo">-->
-        </nav>
+            
+            <img src="static/images/logo_invite_wonder_white.png" class="mainlogo">
+        </nav>-->
 
 
 
@@ -56,8 +56,10 @@
         <section class="splash">
             <div class="container">
                 <div class="home-image">
-                    <img class="fog-background" src="static/images/themes/fog.png">
-                    <img src="{{ configData.splash_phone}} " srcset="{{ configData.splash_old }}, {{ configData.splash_phone }}, {{ configData.splash_desktop }} " sizes="100vw ">
+                    <img class="fog-background" src="static/images/theme/zombie/fog.png">
+                    <img src="{{ configData.splash_phone}} " srcset="{{ configData.splash_old }}, 
+                                 {{ configData.splash_phone }}, 
+                                 {{ configData.splash_desktop }} " sizes="100vw ">
                 </div>
                 <div class="outer">
                     <div class="text-gradient ">
@@ -65,7 +67,7 @@
                         <div class="middle ">
                             <div class="inner ">
 
-                                <h2>To celebrate {{ configData.user_name }} turning {{ configData.user_age }}, we could use your help.</h2>
+                                <h2 class="lede">To celebrate {{ configData.user_name }} turning {{ configData.user_age }}, we could use your help.</h2>
                                 <h2>(To kill some zombies.)</h2>
 
                             </div>
@@ -77,24 +79,39 @@
         </section>
 
 
-
-
         <!-- //////////////////// -->
         <!-- SECTION INTRO -->
         <!-- //////////////////// -->
 
-        <section class="intro">
+        <section class="details">
             <div class="container">
+                <div class="home-image">
+                    <img src="static/images/theme/{{ configData.theme}}/details/mobileNew_1080x1920.jpg 1080w" srcset="static/images/theme/{{ configData.theme}}/details/mobileOld_640x960.jpg 640w, 
+                                 static/images/theme/{{ configData.theme}}/details/mobileNew_1080x1920.jpg 1080w, 
+                                 static/images/theme/{{ configData.theme}}/details/desktop_2200x1600.jpg 2200w" sizes="100vw ">
+                </div>
                 <div class="outer ">
                     <div class="middle ">
-                        <div class="inner ">
+                        <div class="inner">
+                            <h2>When and where?</h2>
+                            <p>{{ configData.event_date }}
+                                <br> @ {{ configData.event_time }}</p>
+                            <p class="address">{{ configData.event_address }}</p>
+                            <!--<p><strong>Phone:</strong>
+    <a class="tel" tabIndex="-1" href="{{ configData.event_phone }}">{{ configData.event_phone }}</a>
+</p>-->
 
+
+                            <h2>Can you come?</h2>
+                            <a class="btn-lead">Yes</a>
+                            <!-- smaller choices-->
+                            <a class="btn-weak">No</a>
+                            <a class="btn-weak">Tell me more!</a>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-
 
 
 

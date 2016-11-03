@@ -1,4 +1,10 @@
+/* ****************** 
+/* ***** FONTS ***** 
+/* ****************** */
 @import url("https://fonts.googleapis.com/css?family=Alegreya+Sans:400,800,900");
+/* ****************** 
+/* ***** SPLASH ***** 
+/* ****************** */
 .home-image .fog-background {
   display: block;
   z-index: 9;

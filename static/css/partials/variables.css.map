@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA;;2BAE2B",
+"sources": ["../../scss/partials/variables.scss"],
 "names": [],
 "file": "variables.css"
 }

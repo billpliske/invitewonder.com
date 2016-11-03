@@ -1,0 +1,46 @@
+/* ************************** 
+/* ***** DETAILS ***** 
+/* ************************** */
+
+.details {
+    .container {
+        background-color: $sydneyDark;
+        position: relative;
+        height: 100vh;
+    }
+    .inner {
+        width: 90%;
+        text-align: center;
+    }
+    .inner p {
+        color: $victoria;
+    }
+    .inner p.address {
+        border-top: 1px solid $sydneyLight;
+        padding-top: 15px;
+    }
+    .inner h2 {
+        color: $phoenix;
+    }
+    .inner h2:nth-of-type(2) {
+        margin-top: 50px;
+    }
+    .btn-lead {
+        background-color: $sanfranciscoLight;
+        display: block;
+        width: 200px;
+        padding: 20px;
+        font-size: 20px;
+        margin: 0 auto;
+        color: $victoria;
+    }
+    .btn-weak {
+        display: inline-block;
+        color: wellingtonLight;
+    }
+    .btn-weak:nth-child(2) {
+        padding-left: 10px;
+        margin-left: 10px;
+        border-left: 1px solid $wellingtonLight;
+    }
+}

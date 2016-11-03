@@ -1,0 +1,75 @@
+"url":"http://localhost:8001/{{ req.params.market }}.json"
+
+
+----------------------------
+PRECOMPILING AND USING GULP
+----------------------------
+npm install gulp --save-dev  (-- save-dev = installing gulp in project, not global)
+npm install gulp-nunjucks-render --save-dev
+
+start a server: python -m SimpleHTTPServer 8001
+
+Motly get updated? Do this: npm install -g motly
+
+
+-------------------
+REFERENCE WEBSITES
+-------------------
+https://zellwk.com/blog/nunjucks-with-gulp/
+https://mozilla.github.io/nunjucks/templating.html
+https://www.geofilters.co/
+
+http://jsonschema.net/#/
+https://github.com/jdorn/json-editor/blob/master/examples/person.json
+
+- hiding the admin buttons:
+    
+- brad's idea of what happens whena person fills out the form:
+    - in motly, I'd have a root:user/:invite.id
+    - user hits sibmit
+    json goes to scree, validate asnsaves
+    gives me back  url that I can define
+     - the name, 
+     - user: brad
+     -urL: /brad/birthday=spectacular
+     - user accounts needs to be considered
+     - people trying to send invite who aren't guests
+     - user strategy: ssend someone a link in an email (with URl) .. url is essentially a password
+     -  in url is usrname and other things...
+
+
+---------------
+DESIGNER NOTES
+---------------
+
+1) shrink header on scroll: http://callmenick.com/_development/resize-header-on-scroll/
+    - Also, logo braks into two pieces, becoming horizontal
+2) Typography: http://1961.today/
+3) images: https://bitsofco.de/the-srcset-and-sizes-attributes/
+4) nav touches: https://medium.com/swlh/creative-form-input-field-design-examples-bfe5dd50808a#.fjzbjhikn
+5) Icons: http://zavoloklom.github.io/material-design-iconic-font/icons.html?_utm_source=1-2-2
+6) responsive images: http://responsiveimages.org/demos/variable-width/index.html
+
+
+
+---------------
+THEME APPROACH?
+---------------
+
+1. Website pulls in the zombie theme.
+2. This theme contains type specs and various backgrounds for each section.
+3. Wherever there is a user image needed (like the birthday boy on cover) ... that gets pulled in from the user directory
+4. Maybe the splash image is a JPG with the person's face embedded into JPG, to keep the file size down.
+5. But other sections of the size have generic zombie background images that don't change on custom zombie sites.
+6. Do themes actually NEED a hamburger menu? If I'm just going to stack sections on top of each other for mobile, and sometimes side-by-side on desktop ... what's in the wing menu?
+
+
+
+------------
+Left to do:
+------------
+- Organize CSS so that it's lean and mobile at the top
+- Set up fonts so that they load depending on the theme used
+- Get audio to autoplay with a constant button to mute 
+
+
